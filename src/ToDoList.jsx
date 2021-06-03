@@ -2,17 +2,17 @@ import React from 'react';
 
 const ToDoList = (props) => {
 
-    const deleteItems = () => {
-        
-    }
+    
 
     return(
        <>
         <div className="todo_style">
             <i class="fa fa-times" aria-hidden="true"
-                onClick={ deleteItems }
+                onClick={ () => {
+                    props.onSelect(props.id);
+                } }
             />
-            <li> {props.text} </li>;
+            <li> {props.text} </li>
         </div>
        </> 
     ); 
